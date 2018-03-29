@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet">
+    <link href="/Styles/kendo.bootstrap.min.css" rel="stylesheet">
+    <link href="/Styles/kendo.common-bootstrap.min.css" rel="stylesheet">
+    <link href="/Styles/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Styles/site.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:400" rel="stylesheet">
+
+    <script src="/Styles/jquery-2.2.3.min.js"></script>
+    <script src="/Styles/bootstrap.min.js"></script>
+    <script src="/Styles/kendo.all.min.js"></script>
+
+    <script src="http://taglibrary.azurewebsites.net/tag-library.js"></script>
+</head>
+
+<body>
+    <tag-layout>
+        <tag-navbar></tag-navbar>
+        <tag-layout-sidenav>
+            <ul>
+                <li>
+                    <stencil-route-link url='#'>
+                        <tag-menu-item i='Home' title='Home'>
+                          <span>Home</span>
+                        </tag-menu-item>
+                      </stencil-route-link>
+                </li>
+            </ul>
+        </tag-layout-sidenav>
+        <main>
+            <div class="component-container">
+                <tag-card-task accent="Viridian-Green" heading="TeamSeer Approval Request for Mike Wolfe" subtitle="Holiday approval request for Mike Wolfe"
+                    avatarplaceholder="JP" when="22nd Sep 2016" who="UI/UX Collaboration" />
+            </div>
+            <div class="component-container">
+                    <tag-card-widget
+                    id="cardButton"
+                    value="26.5 Hours"
+                    description="2 timesheets submitted"
+                    accent="midnight-blue"
+                    buttontext="Test"
+                    applicationname="Focalpoint"
+                    applicationicon="CalendarTick"></tag-card-widget>
+            </div>
+        </main>
+    </tag-layout>
+</body>
+
+</html>
