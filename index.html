@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet">
+
     <link href="/Styles/bootstrap.min.css" rel="stylesheet">
     <link href="/Styles/kendo.bootstrap.min.css" rel="stylesheet">
     <link href="/Styles/kendo.common-bootstrap.min.css" rel="stylesheet">
     <link href="/Styles/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Styles/site.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:400" rel="stylesheet">
 
@@ -20,6 +21,9 @@
     <script src="/Styles/kendo.all.min.js"></script>
 
     <script src="http://taglibrary.azurewebsites.net/tag-library.js"></script>
+
+    <link rel="stylesheet" href="/Styles/site.css">
+
 </head>
 
 <body>
@@ -30,27 +34,43 @@
                 <li>
                     <stencil-route-link url='#'>
                         <tag-menu-item i='Home' title='Home'>
-                          <span>Home</span>
+                            <span>Home</span>
                         </tag-menu-item>
-                      </stencil-route-link>
+                    </stencil-route-link>
                 </li>
             </ul>
         </tag-layout-sidenav>
         <main>
-            <div class="component-container">
-                <tag-card-task accent="Viridian-Green" heading="TeamSeer Approval Request for Mike Wolfe" subtitle="Holiday approval request for Mike Wolfe"
-                    avatarplaceholder="JP" when="22nd Sep 2016" who="UI/UX Collaboration" />
-            </div>
-            <div class="component-container">
-                    <tag-card-widget
-                    id="cardButton"
-                    value="26.5 Hours"
-                    description="2 timesheets submitted"
-                    accent="midnight-blue"
-                    buttontext="Test"
-                    applicationname="Focalpoint"
-                    applicationicon="CalendarTick"></tag-card-widget>
-            </div>
+            <tag-three-col-layout>
+                <tag-card class="tall">
+
+                    <tag-profile name="Bob Marley" src="https://ia.media-imdb.com/images/M/MV5BMTM0MzM3MTg3MF5BMl5BanBnXkFtZTcwNDcwODE0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg" gender="Male" dob="6 Feb 1945" nationality="Jamaican"></tag-profile>
+
+                    <tag-form-group label="Known as" placeholder="Known as"></tag-form-group>
+
+                </tag-card>
+
+                <tag-card-header class="tall" heading="Contact information">
+                    <tag-form-group id="addressline1" label="Address line 1"></tag-form-group>
+                    <tag-form-group id="town" label="Town"></tag-form-group>
+                    <tag-form-group id="county" label="County"></tag-form-group>
+                    <tag-form-group id="postcode" label="Postcode"></tag-form-group>
+                    <tag-form-group id="emailAddress" label="Email address"></tag-form-group>
+                    <tag-form-group id="mobile" label="Mobile"></tag-form-group>
+                    <tag-form-group id="landline" label="Landline"></tag-form-group>
+                </tag-card-header>
+
+                <tag-card-header heading="Emergency Contact">
+                    <tag-form-group id="emergencyName" label="Name"></tag-form-group>
+                    <tag-form-group id="emergencyRelationship" label="Relationship"></tag-form-group>
+                    <tag-form-group id="emergencyMobile" label="Mobile"></tag-form-group>
+                </tag-card-header>
+
+                <tag-card-header heading="Working Pattern">
+                    <tag-pay-wp></tag-pay-wp>
+                </tag-card-header>
+
+            </tag-three-col-layout>
         </main>
     </tag-layout>
 </body>
